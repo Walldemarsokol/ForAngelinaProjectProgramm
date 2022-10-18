@@ -1,11 +1,22 @@
 
 
+from asyncore import write
+from encodings import utf_8
+from fileinput import close
+
+
 list=[] 
 list_1=(input('Введите слово для игры: '))
-list_1,list_2=list_1.find('п'),list_1.find('а')
-# for i in range(len(list_1)):
-#     list.append(list_1[i])
-
+for i in range(len(list_1)):
+    list.append(list_1[i])
+list_2=['а','д','е','л','а','и','д','а']
+# with open ('Names.txt', 'r', encoding=utf_8):
+for j in range(len(list_1)):
+    if list[j]==list_2[5]:
+        print('Аделаида')
+# for j in range(len(list)):
+#     if list[j]==list_2[5]:
+#         print('Аделаида')
 # for j in range(len(list)):
     
 # path = 'Names.txt'
@@ -16,7 +27,8 @@ list_1,list_2=list_1.find('п'),list_1.find('а')
 #     # print(line)
 # data.close()
 # print(list.find(open('Names.txt','r')))
-print(list_1,list_2)
-# print(list_2)
+# print(len(list))
+
+print(list)
 
 
