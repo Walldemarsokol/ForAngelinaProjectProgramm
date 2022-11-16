@@ -1,18 +1,15 @@
 import random
 
-def the_3_step(fact,list):
+def the_3_step(fact,list,check):
     F=[]
     Y=[]
-    z=1 #счетчик для метода
-    while z<fact:
-            random.shuffle(list) # мешаем список
-        # random.shuffle(D)  # мешаем список
-        # F=(''.join(D)) # объединяем в один элемент (было ["п","а","р"] стало ["пар"])
-            F=(''.join(list))
-            if F in Y: # если "пар" есть в списке Y
-                z+=1
-                continue #начнем мешать элементы списка сначала
-            else: #если не нашел
-                Y[len(Y):]=[F]  #добавляем в конец списка  Y
-                print (Y)
-    return Y
+    while check<fact:
+        print(f'check={check+1}')
+        random.shuffle(list) # мешаем список
+        F=(''.join(list))
+        if F in Y: # если "пар" есть в списке Y
+            continue #начнем мешать элементы списка сначала
+        else: #если не нашел
+            Y[len(Y):]=[F]  #добавляем в конец списка  Y
+            print (F) #печатаем F, можно распечатать и пронумеровать элементы списка Y 
+            check+=1
