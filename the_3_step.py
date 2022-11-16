@@ -4,7 +4,6 @@ def the_3_step(fact,list,check):
     F=[]
     Y=[]
     while check<fact:
-        print(f'check={check+1}')
         random.shuffle(list) # мешаем список
         F=(''.join(list))
         if F in Y: # если "пар" есть в списке Y
@@ -13,3 +12,5 @@ def the_3_step(fact,list,check):
             Y[len(Y):]=[F]  #добавляем в конец списка  Y
             print (F) #печатаем F, можно распечатать и пронумеровать элементы списка Y 
             check+=1
+            
+    return Y
