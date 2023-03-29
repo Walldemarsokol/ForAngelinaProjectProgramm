@@ -2,7 +2,7 @@ import random
 from find_method import *
 
 
-def the_3_step(fact, list):
+def test_3step(fact, list):
     F = []  # слово образованное в результате рандомного смешения букв
     Y = []  # список слов F
     check = 0
@@ -14,8 +14,8 @@ def the_3_step(fact, list):
         else:  # если не нашел
             Y[len(Y):] = [F]  # добавляем в конец списка  Y
             print(F)  # печатаем F, можно распечатать и пронумеровать элементы списка Y
-            file_list = find_method()
-            complete_method(file_list, F)
+            # file_list = find_method()
+            # complete_method(file_list, F)
             # print(Y)
             check += 1
     return Y

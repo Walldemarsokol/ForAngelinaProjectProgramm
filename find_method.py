@@ -14,14 +14,14 @@ def find_method():#функция для поиска в текством фай
     return words
 
 
-def complete_method(list,find_word):
-    for line in list:
+def complete_method(file_list,find_word):# сравнивается список слов из файла и рандомное слово
+    for line in file_list:
         if find_word == line: #.split('\n'):
                 # print(line)
             print(f"Найдено слово:{find_word}")
             continue
         else:
-                # print(line.strip())
+            # print(find_word)
             continue
 
 
